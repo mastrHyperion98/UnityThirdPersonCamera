@@ -65,11 +65,7 @@ namespace ThirdPerson {
              // check for any collisions
              CheckCollision();
              if (isColliding) {
-                 /*
-                  * y = -1 in the new vector to prevent the camera from clipping through the floor when rotating because
-                  * of LookAt which can cause the camera to trigger a collision and get stuck under the target. 
-                  */
-                 positionOffset = rotation * new Vector3(0,-1,adjustedDistance);
+                 positionOffset = rotation * new Vector3(0,0,adjustedDistance);
              }
              else {
                  positionOffset = rotation * new Vector3(0, 0, distance);
